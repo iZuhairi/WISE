@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Encyclopedia - WISE</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dark-mode">
+
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav-logo">
+                W<span class="logo-highlight">I</span>SE
+            </a>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="../alchemy/alchemy.html" class="nav-link">Alchemy</a></li>
+                    <li class="nav-item"><a href="encyclopedia.html" class="nav-link active">Encyclopedia</a></li>
+                    <li class="nav-item"><a href="../experiment/experiment.html" class="nav-link">Simulator</a></li>
+                    <li class="nav-item"><a href="../tutor/tutor.html" class="nav-link">AI Tutor</a></li>
+                    <li class="nav-item"><a href="../astronomy/astronomy.html" class="nav-link">Astronomy</a></li>
+                    <li class="nav-item"><a href="../physics/physics.html" class="nav-link">Physics</a></li>
+                    <li class="nav-item"><a href="../technology/technology.html" class="nav-link">Tech</a></li>
+                    <li class="nav-item"><a href="../contact/contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+                <div class="nav-close" id="nav-close"><i class="fas fa-times"></i></div>
+            </div>
+
+            <div class="nav-toggle" id="nav-toggle"><i class="fas fa-bars"></i></div>
+            <div class="theme-toggle" id="theme-toggle"><i class="fas"></i></div> </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="encyclopedia section container">
+            <h1 class="section-title">Element Encyclopedia</h1>
+            <p class="section-subtitle">
+                Search the database of known elements, from the real to the ethereal.
+            </p>
+
+<div class="controls-container">
+    
+    <div class="search-bar">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="search-input" placeholder="Search by name, symbol, or category...">
+    </div>
+    
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="Basic">Basic</button>
+        <button class="filter-btn" data-filter="Metal">Metal</button>
+        <button class="filter-btn" data-filter="Ethereal">Ethereal</button>
+        <button class="filter-btn" data-filter="Compound">Compound</button>
+        
+        <button class="filter-btn more-btn" id="more-filters-toggle">
+            More... <i class="fas fa-chevron-down"></i>
+        </button>
+    </div>
+
+    <div class="filter-buttons extra-filters" id="extra-filters">
+        <button class="filter-btn" data-filter="Alkali Metal">Alkali Metal</button>
+        <button class="filter-btn" data-filter="Alkaline Earth">Alkaline Earth</button>
+        <button class="filter-btn" data-filter="Transition Metal">Transition Metal</button>
+        <button class="filter-btn" data-filter="Metalloid">Metalloid</button>
+        <button class="filter-btn" data-filter="Noble Gas">Noble Gas</button>
+        <button class="filter-btn" data-filter="Lanthanide">Lanthanide</button>
+        <button class="filter-btn" data-filter="Actinide">Actinide</button>
+        <button class="filter-btn" data-filter="Origin">Origin</button>
+    </div>
+    
+</div>
+
+
+
+            <div class="encyclopedia-grid" id="encyclopedia-grid">
+                </div>
+            
+            <p id="no-results" class="no-results-message" style="display: none;">
+                No elements found matching your criteria.
+            </p>
+
+        </section>
+    </main>
+
+    <footer class="footer section">
+        <div class="footer-container container">
+            <p>&copy; 2025 WISE Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script> <script src="encyclopedia.js"></script> </body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment Simulator - WISE</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dark-mode">
+
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav-logo">
+                W<span class="logo-highlight">I</span>SE
+            </a>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="../alchemy/alchemy.html" class="nav-link">Alchemy</a></li>
+                    <li class="nav-item"><a href="../encyclopedia/encyclopedia.html" class="nav-link">Encyclopedia</a></li>
+                    <li class="nav-item"><a href="experiment.html" class="nav-link active">Simulator</a></li>
+                    <li class="nav-item"><a href="../tutor/tutor.html" class="nav-link">AI Tutor</a></li>
+                    <li class="nav-item"><a href="../astronomy/astronomy.html" class="nav-link">Astronomy</a></li>
+                    <li class="nav-item"><a href="../physics/physics.html" class="nav-link">Physics</a></li>
+                    <li class="nav-item"><a href="../technology/technology.html" class="nav-link">Tech</a></li>
+                    <li class="nav-item"><a href="../contact/contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+                <div class="nav-close" id="nav-close"><i class="fas fa-times"></i></div>
+            </div>
+
+            <div class="nav-toggle" id="nav-toggle"><i class="fas fa-bars"></i></div>
+            <div class="theme-toggle" id="theme-toggle"><i class="fas"></i></div> </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="simulator section container">
+            <h1 class="section-title">Experiment Simulator</h1>
+            
+            <div class="simulator-grid">
+                
+                <div class="sim-module">
+                    <h2 class="module-title"><i class="fas fa-weight-hanging"></i> Potential Energy</h2>
+                    <div class="sim-controls">
+                        <div class="control-group">
+                            <label for="pe-mass">Mass (kg)</label>
+                            <input type="range" id="pe-mass" min="1" max="100" value="10" class="slider">
+                            <span id="pe-mass-value">10 kg</span>
+                        </div>
+                        <div class="control-group">
+                            <label for="pe-height">Height (m)</label>
+                            <input type="range" id="pe-height" min="1" max="100" value="10" class="slider">
+                            <span id="pe-height-value">10 m</span>
+                        </div>
+                    </div>
+                    <div class="sim-output">
+                        <h3>Result:</h3>
+                        <p id="pe-output">Potential Energy (PE) = 981.00 Joules</p>
+                        <p class="formula">Formula: PE = mgh (g ≈ 9.81 m/s²)</p>
+                    </div>
+                </div>
+
+                <div class="sim-module">
+                    <h2 class="module-title"><i class="fas fa-temperature-half"></i> State of Matter (Water)</h2>
+                    <div class="sim-controls">
+                        <div class="control-group">
+                            <label for="sm-temp">Temperature (°C)</label>
+                            <input type="range" id="sm-temp" min="-50" max="150" value="20" class="slider">
+                            <span id="sm-temp-value">20 °C</span>
+                        </div>
+                    </div>
+                    <div class="sim-output">
+                        <h3>Result:</h3>
+                        <p id="sm-output" class="state-liquid">State: Liquid</p>
+                        <div class="visual-state" id="sm-visual">
+                            <i class="fas fa-water"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sim-module">
+                    <h2 class="module-title"><i class="fas fa-bullseye"></i> Projectile Motion</h2>
+                    <div class="sim-controls">
+                        <div class="control-group">
+                            <label for="pm-velocity">Initial Velocity (m/s)</label>
+                            <input type="range" id="pm-velocity" min="1" max="100" value="25" class="slider">
+                            <span id="pm-velocity-value">25 m/s</span>
+                        </div>
+                        <div class="control-group">
+                            <label for="pm-angle">Launch Angle (°)</label>
+                            <input type="range" id="pm-angle" min="0" max="90" value="45" class="slider">
+                            <span id="pm-angle-value">45 °</span>
+                        </div>
+                    </div>
+                    <div class="sim-output">
+                        <h3>Result:</h3>
+                        <p id="pm-output">Range (Distance) = 63.71 meters</p>
+                        <p class="formula">Formula: R = (v² * sin(2θ)) / g</p>
+                    </div>
+                </div>
+
+                <div class="sim-module circuit-module">
+    <h2 class="module-title"><i class="fas fa-microchip"></i> Circuit Builder</h2>
+    
+    <div class="sim-controls">
+        <div class="control-group">
+            <label for="voltage-slider">Voltage (V):</label>
+            <input type="range" min="1.5" max="12" value="6" step="0.5" class="slider" id="voltage-slider">
+            <span id="voltage-output">6 V</span>
+        </div>
+        <div class="control-group">
+            <label for="resistance-slider">Resistance (Ω):</label>
+            <input type="range" min="1" max="100" value="10" step="1" class="slider" id="resistance-slider">
+            <span id="resistance-output">10 Ω</span>
+        </div>
+        
+        <button class="btn btn-glow" id="run-circuit-btn">Simulate Circuit</button>
+    </div>
+
+    <div class="sim-output">
+        <h3>Circuit Status</h3>
+        
+        <div class="visual-light-container">
+            <i class="fas fa-lightbulb visual-light" id="light-bulb"></i>
+            <p id="light-status">Click Simulate to run</p>
+        </div>
+
+        <p>Current (I): <span id="current-result" class="result-highlight">0 A</span></p>
+        <p class="formula">Formula: Ohm's Law (V = IR) → I = V / R</p>
+    </div>
+</div>
+
+                <div class="sim-module orbital-module">
+    <h2 class="module-title"><i class="fas fa-satellite"></i> Orbital Dynamics</h2>
+    
+    <div class="sim-controls">
+        <div class="control-group">
+            <label for="planet-mass-slider">Planet Mass (M_E):</label>
+            <input type="range" min="0.5" max="2.0" value="1.0" step="0.1" class="slider" id="planet-mass-slider">
+            <span id="planet-mass-output">1.0 M_E</span>
+        </div>
+        <div class="control-group">
+            <label for="initial-velocity-slider">Initial Velocity (km/s):</label>
+            <input type="range" min="20" max="40" value="30" step="1" class="slider" id="initial-velocity-slider">
+            <span id="initial-velocity-output">30 km/s</span>
+        </div>
+        
+        <button class="btn btn-glow" id="simulate-orbit-btn">Simulate Orbit</button>
+    </div>
+
+    <div class="sim-output">
+        <h3>Orbit Prediction</h3>
+        <div class="visual-state" id="orbit-visual">
+            <i class="fas fa-circle state-gas"></i>
+        </div>
+        <p id="orbit-result">Orbit: <span class="result-highlight">Stable Ellipse</span></p>
+        <p class="formula">Formula: Gravitational Force (F) = G * M1 * M2 / r²</p>
+    </div>
+</div>
+
+<div class="sim-module chemical-module">
+    <h2 class="module-title"><i class="fas fa-flask"></i> Reaction Balancer</h2>
+    
+    <div class="sim-controls">
+        <label for="reaction-input">Unbalanced Equation (e.g., H2 + O2 = H2O):</label>
+        <input type="text" id="reaction-input" placeholder="e.g., C + O2 = CO2">
+        <button class="btn btn-glow" id="balance-reaction-btn">Balance Equation</button>
+    </div>
+
+    <div class="sim-output">
+        <h3>Balanced Result</h3>
+        <p id="balance-result">Equation: <span class="result-highlight">Input a reaction.</span></p>
+        <p class="formula">Goal: Atoms on both sides must match.</p>
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer section">
+        <div class="footer-container container">
+            <p>&copy; 2025 WISE Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script> <script src="experiment.js"></script> </body>
+</html>

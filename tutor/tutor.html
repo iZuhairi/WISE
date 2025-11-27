@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Science Tutor - WISE</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dark-mode">
+
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav-logo">
+                W<span class="logo-highlight">I</span>SE
+            </a>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="../alchemy/alchemy.html" class="nav-link">Alchemy</a></li>
+                    <li class="nav-item"><a href="../encyclopedia/encyclopedia.html" class="nav-link">Encyclopedia</a></li>
+                    <li class="nav-item"><a href="../experiment/experiment.html" class="nav-link">Simulator</a></li>
+                    <li class="nav-item"><a href="tutor.html" class="nav-link active">AI Tutor</a></li>
+                    <li class="nav-item"><a href="../astronomy/astronomy.html" class="nav-link">Astronomy</a></li>
+                    <li class="nav-item"><a href="../physics/physics.html" class="nav-link">Physics</a></li>
+                    <li class="nav-item"><a href="../technology/technology.html" class="nav-link">Tech</a></li>
+                    <li class="nav-item"><a href="../contact/contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+                <div class="nav-close" id="nav-close"><i class="fas fa-times"></i></div>
+            </div>
+
+            <div class="nav-toggle" id="nav-toggle"><i class="fas fa-bars"></i></div>
+            <div class="theme-toggle" id="theme-toggle"><i class="fas"></i></div> </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="tutor-section">
+            
+            <aside class="tutor-sidebar">
+                <div class="sidebar-header">
+                    <h2 class="module-title">Topics Library</h2>
+                </div>
+                <ul class="sidebar-list">
+                    <li><i class="fas fa-flask-vial"></i> Alchemy</li>
+                    <li><i class="fas fa-satellite"></i> Astronomy</li>
+                    <li><i class="fas fa-atom"></i> Physics</li>
+                    <li><i class="fas fa-laptop-code"></i> IT & Tech</li>
+                    <li><i class="fas fa-shield-halved"></i> Cybersecurity</li>
+                </ul>
+            </aside>
+
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h1 class="chat-title">AI Science Tutor</h1>
+                    <p>Ask me anything about science or technology!</p>
+                </div>
+
+                <div class="chat-messages" id="messages">
+                    <div class="message bot">
+                        Hello. I am the WISE AI Tutor. How can I help you explore the world of science today?
+                    </div>
+                </div>
+
+                <div class="chat-input-area">
+                    <input type="text" id="input" class="chat-input" placeholder="Type your message here...">
+                    <button class="chat-send-btn" onclick="sendMessage()">
+                        <button class="chat-send-btn" id="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="../main.js"></script> <script src="tutor.js"></script> </body>
+</html>

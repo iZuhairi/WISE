@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronomy Module - WISE</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dark-mode">
+
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav-logo">
+                W<span class="logo-highlight">I</span>SE
+            </a>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="../alchemy/alchemy.html" class="nav-link">Alchemy</a></li>
+                    <li class="nav-item"><a href="../encyclopedia/encyclopedia.html" class="nav-link">Encyclopedia</a></li>
+                    <li class="nav-item"><a href="../experiment/experiment.html" class="nav-link">Simulator</a></li>
+                    <li class="nav-item"><a href="../tutor/tutor.html" class="nav-link">AI Tutor</a></li>
+                    <li class="nav-item"><a href="astronomy.html" class="nav-link active">Astronomy</a></li>
+                    <li class="nav-item"><a href="../physics/physics.html" class="nav-link">Physics</a></li>
+                    <li class="nav-item"><a href="../technology/technology.html" class="nav-link">Tech</a></li>
+                    <li class="nav-item"><a href="../contact/contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+                <div class="nav-close" id="nav-close"><i class="fas fa-times"></i></div>
+            </div>
+
+            <div class="nav-toggle" id="nav-toggle"><i class="fas fa-bars"></i></div>
+            <div class="theme-toggle" id="theme-toggle"><i class="fas"></i></div> 
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="astronomy section container">
+            <h1 class="section-title">Cosmic Database</h1>
+            <p class="section-subtitle">
+                Explore stars, planets, and celestial bodies in a searchable catalog.
+            </p>
+
+            <div class="controls-container">
+                <div class="search-bar">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Search by name or category...">
+                </div>
+                
+                <div class="filter-buttons" id="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="Star">Stars</button>
+                    <button class="filter-btn" data-filter="Planet">Planets</button>
+                    <button class="filter-btn" data-filter="Dwarf Planet">Dwarf Planets</button>
+                    <button class="filter-btn" data-filter="Satellite">Moons</button>
+                </div>
+                </div>
+
+            <div class="encyclopedia-grid" id="astronomy-grid">
+                </div>
+            
+            <p id="no-results" class="no-results-message" style="display: none;">
+                No celestial objects found matching your criteria.
+            </p>
+
+        </section>
+    </main>
+
+    <footer class="footer section">
+        <div class="footer-container container">
+            <p>&copy; 2025 WISE Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script> 
+    <script src="astronomy.js"></script> 
+</body>
+</html>

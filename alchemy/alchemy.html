@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alchemy Lab - WISE</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dark-mode">
+
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav-logo">
+                W<span class="logo-highlight">I</span>SE
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="alchemy.html" class="nav-link active">Alchemy</a></li>
+                    <li class="nav-item"><a href="../encyclopedia/encyclopedia.html" class="nav-link">Encyclopedia</a></li>
+                    <li class="nav-item"><a href="../experiment/experiment.html" class="nav-link">Simulator</a></li>
+                    <li class="nav-item"><a href="../tutor/tutor.html" class="nav-link">AI Tutor</a></li>
+                    <li class="nav-item"><a href="../astronomy/astronomy.html" class="nav-link">Astronomy</a></li>
+                    <li class="nav-item"><a href="../physics/physics.html" class="nav-link">Physics</a></li>
+                    <li class="nav-item"><a href="../technology/technology.html" class="nav-link">Tech</a></li>
+                    <li class="nav-item"><a href="../contact/contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+                <div class="nav-close" id="nav-close"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="nav-toggle" id="nav-toggle"><i class="fas fa-bars"></i></div>
+            <div class="theme-toggle" id="theme-toggle"><i class="fas fa-sun"></i></div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="section container alchemy-lab">
+            <h1 class="section-title">Alchemy Lab ⚗️</h1>
+
+            <div class="alchemy-container">
+
+                <div class="lab-module periodic-table-module">
+                    <h2 class="module-title">Periodic Table</h2>
+                    <div class="periodic-table-placeholder" id="periodic-table-new">
+                        <p>Kawasan untuk 'Periodic Table' penuh akan diletak di sini.</p>
+                        </div>
+                </div>
+
+                <div class="lab-module combine-module">
+                    <h2 class="module-title">Combine Chamber</h2>
+                    <div class="combine-chamber" id="combine-chamber">
+                        <div class="slot" id="slot-a">Slot A</div>
+                        <i class="fas fa-plus chamber-icon"></i>
+                        <div class="slot" id="slot-b">Slot B</div>
+                    </div>
+                    <div class="combine-buttons">
+                        <button class="btn btn-glow" id="combine-button">Combine</button>
+                        <button class="btn btn-secondary" id="clear-button">Clear</button>
+                    </div>
+                    <div class="combine-result" id="combine-result">
+                        <p>Select two elements to combine.</p>
+                    </div>
+                </div>
+
+                <div class="lab-module details-module">
+                    <h2 class="module-title">Element Details</h2>
+                    <div class="details-panel" id="details-panel">
+                        <p class="details-placeholder">Select an element to see its details.</p>
+                        <h3 id="detail-name"></h3>
+                        <p id="detail-category"></p>
+                        <p id="detail-danger" class="danger-level"></p>
+                        <p id="detail-description"></p>
+                    </div>
+                </div>
+
+                <div class="lab-module grid-column">
+                    <h2 class="module-title">Available Elements</h2>
+                    <div class="element-grid" id="element-grid">
+                        </div>
+                </div>
+
+            </div> </section>
+    </main>
+
+    <footer class="footer section">
+        <div class="footer-container container">
+            <p>&copy; 2025 WISE Project. All rights reserved.</p>
+            <p>A Gamified Learning Experience.</p>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+    <script src="alchemy.js"></script>
+</body>
+</html>
