@@ -5,7 +5,7 @@ import google.generativeai as genai
 
 app = Flask(__name__)
 CORS(app)
-genai.configure(api_key="AIzaSyDfYDWa4_s9i5OqvOEnezyXDOP6rUIM7n0")
+genai.configure(api_key=".......")
 
 system_prompt = """
 You are WISE, a friendly science teacher for Students (Age range 13-25).
@@ -31,3 +31,4 @@ def chat():
 
 if __name__ == "__main__":
     app.run(port=5000)
+
